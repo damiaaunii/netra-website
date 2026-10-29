@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NETRA | Network Traffic Analysis & Monitoring System</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header class="navbar">
+
+    <a href="#home" class="brand">
+
+        <img
+            src="assets/netra-logo.png"
+            alt="NETRA Symbol"
+            class="brand-symbol"
+        >
+
+        <img
+            src="assets/netra-dark.png"
+            alt="NETRA - See Beyond Traffic"
+            class="brand-wordmark"
+            id="brandWordmark"
+        >
+
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+        <a href="#product">Product</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#technology">Technology</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+
+        <button id="themeToggle" class="theme-button" type="button">
+            <span id="themeIcon">☾</span>
+            <span id="themeText">Dark</span>
+        </button>
+
+    </div>
+
+    <button
+        class="mobile-menu-button"
+        id="mobileMenuButton"
+        type="button"
+        aria-label="Open menu"
+    >
+        ☰
+    </button>
+
+</header>
+
+
+<main>
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero section" id="home">
+
+    <div class="signal-field" aria-hidden="true">
+        <div class="signal-grid"></div>
+        <div class="scan-beam"></div>
+
+        <div class="signal-point point-a"></div>
+        <div class="signal-point point-b"></div>
+        <div class="signal-point point-c"></div>
+    </div>
+
+    <div class="hero-content">
+
+        <p class="eyebrow">
+            NETWORK TRAFFIC ANALYSIS & MONITORING SYSTEM
+        </p>
+
+        <h1>
+            See beyond
+            <span>network traffic.</span>
+        </h1>
+
+        <p class="hero-description">
+            NETRA is a web-based platform designed to monitor,
+            analyse and visualize network traffic in real-time.
+            It helps identify abnormal traffic behaviour and
+            provides administrators with better visibility
+            into network activity.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#dashboard" class="button button-primary">
+                Explore NETRA
+                <span>↗</span>
+            </a>
+
+            <a href="#how-it-works" class="text-link">
+                See how it works
+                <span>→</span>
+            </a>
+
+        </div>
+
+        <div class="hero-points">
+
+            <span>
+                <b>01</b>
+                Real-Time Monitoring
+            </span>
+
+            <span>
+                <b>02</b>
+                AI-Based Detection
+            </span>
+
+            <span>
+                <b>03</b>
+                Security Alerts
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="instrument">
+
+        <div class="instrument-top">
+            <span>NETRA / SIGNAL VIEW</span>
+
+            <span class="instrument-state">
+                <i></i>
+                CONCEPT VISUAL
+            </span>
+        </div>
+
+        <div class="instrument-screen">
+
+            <div class="scope-ring ring-one"></div>
+            <div class="scope-ring ring-two"></div>
+
+            <div class="scope-cross horizontal"></div>
+            <div class="scope-cross vertical"></div>
+
+            <div class="scope-sweep"></div>
+
+            <div class="scope-ping ping-one"></div>
+            <div class="scope-ping ping-two"></div>
+            <div class="scope-ping ping-three"></div>
+
+            <div class="scope-center">
+                <img src="assets/netra-dark.png"
+                    alt="NETRA - See Beyond Traffic">
+            </div>
+
+        </div>
+
+        <div class="instrument-bottom">
+            <span>MONITOR / ANALYZE / DETECT</span>
+            <span>VISUAL DEMONSTRATION</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PRODUCT
+===================================================== -->
+
+<section class="product-section section" id="product">
+
+    <div class="section-heading">
+
+        <div>
+            <p class="section-number">
+                THE PRODUCT
+            </p>
+
+            <h2>
+                Network visibility
+                <span>made clearer.</span>
+            </h2>
+        </div>
+
+        <p class="section-intro">
+            NETRA combines real-time packet capture,
+            network traffic analysis, AI-based anomaly
+            detection and security alert monitoring
+            through one centralized web-based platform.
+        </p>
+
+    </div>
+
+
+    <div class="accordion">
+
+        <div class="accordion-item active">
+
+            <button class="accordion-header">
+
+                <span class="accordion-number">01</span>
+
+                <span class="accordion-title">
+                    Real-Time Network Monitoring
+                </span>
+
+                <span class="accordion-icon">−</span>
+
+            </button>
+
+            <div class="accordion-content">
+
+                <div class="accordion-content-inner">
+
+                    <p>
+                        NETRA captures network packets using
+                        Python Scapy, allowing administrators
+                        to observe network activity in real-time.
+                    </p>
+
+                    <span class="feature-label">
+                        LIVE TRAFFIC
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="accordion-item">
+
+            <button class="accordion-header">
+
+                <span class="accordion-number">02</span>
+
+                <span class="accordion-title">
+                    Traffic Analysis
+                </span>
+
+                <span class="accordion-icon">+</span>
+
+            </button>
+
+            <div class="accordion-content">
+
+                <div class="accordion-content-inner">
+
+                    <p>
+                        Captured packet information is processed
+                        and prepared for traffic behaviour analysis.
+                    </p>
+
+                    <span class="feature-label">
+                        PACKET PROCESSING
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="accordion-item">
+
+            <button class="accordion-header">
+
+                <span class="accordion-number">03</span>
+
+                <span class="accordion-title">
+                    AI-Based Anomaly Detection
+                </span>
+
+                <span class="accordion-icon">+</span>
+
+            </button>
+
+            <div class="accordion-content">
+
+                <div class="accordion-content-inner">
+
+                    <p>
+                        Isolation Forest analyses network traffic
+                        behaviour to help identify patterns that
+                        differ from normal network activity.
+                    </p>
+
+                    <span class="feature-label">
+                        ISOLATION FOREST
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="accordion-item">
+
+            <button class="accordion-header">
+
+                <span class="accordion-number">04</span>
+
+                <span class="accordion-title">
+                    Security Alerts
+                </span>
+
+                <span class="accordion-icon">+</span>
+
+            </button>
+
+            <div class="accordion-content">
+
+                <div class="accordion-content-inner">
+
+                    <p>
+                        Suspicious network activity detected
+                        by NETRA is displayed as a security
+                        alert for administrator review.
+                    </p>
+
+                    <span class="feature-label">
+                        ALERT MONITORING
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="accordion-item">
+
+            <button class="accordion-header">
+
+                <span class="accordion-number">05</span>
+
+                <span class="accordion-title">
+                    IP Management
+                </span>
+
+                <span class="accordion-icon">+</span>
+
+            </button>
+
+            <div class="accordion-content">
+
+                <div class="accordion-content-inner">
+
+                    <p>
+                        Administrators can view monitored IP
+                        addresses and network access information
+                        through the NETRA dashboard.
+                    </p>
+
+                    <span class="feature-label">
+                        IP MANAGEMENT
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="accordion-item">
+
+            <button class="accordion-header">
+
+                <span class="accordion-number">06</span>
+
+                <span class="accordion-title">
+                    Reports
+                </span>
+
+                <span class="accordion-icon">+</span>
+
+            </button>
+
+            <div class="accordion-content">
+
+                <div class="accordion-content-inner">
+
+                    <p>
+                        NETRA presents network and security
+                        information in a structured format
+                        to support monitoring and analysis.
+                    </p>
+
+                    <span class="feature-label">
+                        REPORTING
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     DASHBOARD
+===================================================== -->
+
+<section class="dashboard-section section" id="dashboard">
+
+    <div class="section-heading">
+
+        <div>
+            <p class="section-number">
+                SNEAK PEEK
+            </p>
+
+            <h2>
+                Inside the
+                <span>NETRA dashboard.</span>
+            </h2>
+        </div>
+
+        <p class="section-intro">
+            Explore the main NETRA interfaces used to
+            monitor traffic, review detected suspicious
+            activity and manage monitored IP addresses.
+        </p>
+
+    </div>
+
+
+    <div class="slideshow">
+
+        <article class="slide active">
+
+            <div class="slide-image">
+                <img
+                    src="assets/dashboard/live-traffic.jpeg"
+                    alt="NETRA Live Traffic"
+                >
+            </div>
+
+            <div class="slide-information">
+
+                <span class="slide-number">01</span>
+
+                <p class="slide-label">
+                    LIVE TRAFFIC
+                </p>
+
+                <h3>
+                    Monitor network
+                    activity in real-time.
+                </h3>
+
+                <p>
+                    Displays captured network traffic
+                    and packet information in real-time.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="slide">
+
+            <div class="slide-image">
+                <img
+                    src="assets/dashboard/security-alerts.jpeg"
+                    alt="NETRA Security Alerts"
+                >
+            </div>
+
+            <div class="slide-information">
+
+                <span class="slide-number">02</span>
+
+                <p class="slide-label">
+                    SECURITY ALERTS
+                </p>
+
+                <h3>
+                    Review suspicious
+                    network activity.
+                </h3>
+
+                <p>
+                    Displays suspicious activity with
+                    risk levels and relevant information
+                    for administrator review.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="slide">
+
+            <div class="slide-image">
+                <img
+                    src="assets/dashboard/ip-management.jpeg"
+                    alt="NETRA IP Management"
+                >
+            </div>
+
+            <div class="slide-information">
+
+                <span class="slide-number">03</span>
+
+                <p class="slide-label">
+                    IP MANAGEMENT
+                </p>
+
+                <h3>
+                    Manage monitored
+                    IP addresses.
+                </h3>
+
+                <p>
+                    Displays monitored IP addresses
+                    and network access information.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <button
+            class="slide-arrow slide-prev"
+            aria-label="Previous slide"
+        >
+            ←
+        </button>
+
+        <button
+            class="slide-arrow slide-next"
+            aria-label="Next slide"
+        >
+            →
+        </button>
+
+
+        <div class="slide-dots">
+
+            <button
+                class="slide-dot active"
+                data-slide="0"
+                aria-label="Slide 1"
+            ></button>
+
+            <button
+                class="slide-dot"
+                data-slide="1"
+                aria-label="Slide 2"
+            ></button>
+
+            <button
+                class="slide-dot"
+                data-slide="2"
+                aria-label="Slide 3"
+            ></button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     HOW IT WORKS
+===================================================== -->
+
+<section class="how-section section" id="how-it-works">
+
+    <div class="section-heading">
+
+        <div>
+            <p class="section-number">
+                HOW IT WORKS
+            </p>
+
+            <h2>
+                From network traffic
+                <span>to security visibility.</span>
+            </h2>
+        </div>
+
+        <p class="section-intro">
+            NETRA captures network packets, processes
+            traffic information and analyses traffic
+            behaviour to identify abnormal patterns.
+        </p>
+
+    </div>
+
+
+    <div class="system-design-container">
+
+        <img
+            src="assets/project/system-design.png"
+            alt="NETRA System Design"
+            class="system-design-image"
+        >
+
+    </div>
+
+
+    <div class="process-track">
+
+        <article class="process-item">
+            <div class="process-number">01</div>
+            <h3>CAPTURE</h3>
+            <p>
+                Receive traffic from the configured network monitoring interface.
+            </p>
+        </article>
+
+        <article class="process-item">
+            <div class="process-number">02</div>
+            <h3>ANALYZE</h3>
+            <p>
+                Process traffic attributes and classify network behaviour.
+            </p>
+        </article>
+
+        <article class="process-item">
+            <div class="process-number">03</div>
+            <h3>DETECT</h3>
+            <p>
+                Identify abnormal records and generate security alerts.
+            </p>
+        </article>
+
+        <article class="process-item">
+            <div class="process-number">04</div>
+            <h3>RESPOND</h3>
+            <p>
+                Review events, manage incident tickets and create reports.
+            </p>
+        </article>
+
+    </div>
+
+    <p class="workflow-disclaimer">
+        Live detection requires connection to the configured
+        packet-capture and detection components.
+    </p>
+
+        
+
+</section>
+
+
+<!-- =====================================================
+     TECHNOLOGY
+===================================================== -->
+
+<section class="technology-section section" id="technology">
+
+    <div class="section-heading">
+
+        <div>
+            <p class="section-number">
+                TECHNOLOGY
+            </p>
+
+            <h2>
+                Technologies
+                <span>behind NETRA.</span>
+            </h2>
+        </div>
+
+        <p class="section-intro">
+            NETRA combines packet capture, machine
+            learning, database storage and web
+            technologies to support network monitoring.
+        </p>
+
+    </div>
+
+
+    <div class="technology-grid">
+
+        <div class="technology-card" tabindex="0">
+            <span class="technology-number">01</span>
+            <div class="technology-content">
+                <h3>Kali Linux</h3>
+                <p class="technology-short">Operating System</p>
+                <p class="technology-description">Provides the Linux environment used to run NETRA's monitoring components.</p>
+            </div>
+        </div>
+
+        <div class="technology-card" tabindex="0">
+            <span class="technology-number">02</span>
+            <div class="technology-content">
+                <h3>Python 3.x</h3>
+                <p class="technology-short">Programming Language</p>
+                <p class="technology-description">Used to develop NETRA's packet monitoring, processing and detection functions.</p>
+            </div>
+        </div>
+
+        <div class="technology-card" tabindex="0">
+            <span class="technology-number">03</span>
+            <div class="technology-content">
+                <h3>Scapy</h3>
+                <p class="technology-short">Real-Time Packet Capture</p>
+                <p class="technology-description">Captures live network packets for real-time traffic monitoring and analysis.</p>
+            </div>
+        </div>
+
+        <div class="technology-card" tabindex="0">
+            <span class="technology-number">04</span>
+            <div class="technology-content">
+                <h3>Scikit-learn</h3>
+                <p class="technology-short">Isolation Forest</p>
+                <p class="technology-description">Provides the Isolation Forest model used to identify abnormal network traffic patterns.</p>
+            </div>
+        </div>
+
+        <div class="technology-card" tabindex="0">
+            <span class="technology-number">05</span>
+            <div class="technology-content">
+                <h3>Flask</h3>
+                <p class="technology-short">Web Framework</p>
+                <p class="technology-description">Connects NETRA's backend functions with the web-based dashboard.</p>
+            </div>
+        </div>
+
+        <div class="technology-card" tabindex="0">
+            <span class="technology-number">06</span>
+            <div class="technology-content">
+                <h3>MySQL</h3>
+                <p class="technology-short">Alerts & Logs Database</p>
+                <p class="technology-description">Stores network information, security alerts and monitoring records.</p>
+            </div>
+        </div>
+
+        <div class="technology-card" tabindex="0">
+            <span class="technology-number">07</span>
+            <div class="technology-content">
+                <h3>iptables</h3>
+                <p class="technology-short">Firewall Technology</p>
+                <p class="technology-description">Supports IP blocking and unblocking when managed by the administrator.</p>
+            </div>
+        </div>
+
+        <div class="technology-card" tabindex="0">
+            <span class="technology-number">08</span>
+            <div class="technology-content">
+                <h3>Visual Studio Code</h3>
+                <p class="technology-short">Development Tool</p>
+                <p class="technology-description">Used to develop and manage NETRA's source code during the project.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     STATEMENT
+===================================================== -->
+
+<section class="statement-section">
+
+    <div class="statement-content">
+
+        <p class="statement-label">
+            SEE BEYOND TRAFFIC.
+        </p>
+
+        <h2>
+            Better visibility.
+            <span>Better awareness.</span>
+        </h2>
+
+        <p>
+            NETRA demonstrates a practical approach to
+            real-time network monitoring by combining
+            packet capture and AI-based anomaly detection.
+            The system provides administrators with better
+            visibility of network activity and helps
+            identify suspicious traffic.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     TEAM
+===================================================== -->
+
+<section class="team-section section" id="team">
+
+    <div class="section-heading">
+        <div>
+            <p class="section-number">THE TEAM</p>
+
+            <h2>
+                Meet the team
+                <span>behind NETRA.</span>
+            </h2>
+        </div>
+
+        <p class="section-intro">
+            NETRA was developed as a Final Year Project
+            at German-Malaysian Institute.
+        </p>
+    </div>
+
+
+    <div class="simple-team">
+
+        <!-- SUPERVISOR -->
+        <div class="team-person team-supervisor">
+
+            <div class="team-photo">
+                <img src="assets/team/supervisor.png" alt="Project Supervisor">
+            </div>
+
+
+
+            <p class="team-role">PROJECT SUPERVISOR</p>
+
+            <h3>
+                Muhammad Luqman Hakim<br>
+                Mohd Sabani
+            </h3>
+
+        </div>
+
+
+        <div class="team-line"></div>
+
+
+        <!-- TEAM LEADER -->
+        <div class="team-person team-leader">
+
+            <div class="team-photo">
+                <img src="assets/team/arif.png" alt="Arif Haziq">
+            </div>
+
+            <p class="team-role">TEAM LEADER</p>
+
+            <h3>
+                Arif Haziq Bin Abdul Jabar
+            </h3>
+
+        </div>
+
+
+        <div class="team-line"></div>
+
+
+        <!-- TEAM MEMBERS -->
+        <div class="team-members">
+
+            <div class="team-person">
+
+                <div class="team-photo">
+                    <img src="assets/team/ammar.png" alt="Muhammad Ammar">
+                </div>
+
+                <p class="team-role">TEAM MEMBER</p>
+
+                <h3>
+                    Muhammad Ammar<br>
+                    Bin Mohamad Rasid
+                </h3>
+
+            </div>
+
+
+            <div class="team-person">
+
+                <div class="team-photo">
+                    <img src="assets/team/azim.png" alt="Muhammad Azim">
+                </div>
+
+                <p class="team-role">TEAM MEMBER</p>
+
+                <h3>
+                    Muhammad Azim<br>
+                    Bin Aman
+                </h3>
+
+            </div>
+
+
+            <div class="team-person">
+
+                <div class="team-photo">
+                    <img src="assets/team/auni.png" alt="Nurdamia Auni">
+                </div>
+
+                <p class="team-role">TEAM MEMBER</p>
+
+                <h3>
+                    Nurdamia Auni<br>
+                    Binti Suhaimi
+                </h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section class="contact-section section" id="contact">
+
+    <p class="section-number">
+        CONTACT
+    </p>
+
+    <h2 class="contact-title">
+        Let's talk about <span>NETRA.</span>
+    </h2>
+
+
+    <div class="contact-grid">
+
+        <div class="contact-person">
+
+            <h3>ARIF HAZIQ</h3>
+
+            <p>+60 11-2833 1082</p>
+
+            <p>arifhaziq.@student.gmi.edu.my</p>
+
+        </div>
+
+
+        <div class="contact-person">
+
+            <h3>MUHAMMAD AMMAR</h3>
+
+            <p>+60 11-1499 7031</p>
+
+            <p>mdammar.mdrasid@student.gmi.edu.my
+</p>
+
+        </div>
+
+
+        <div class="contact-person">
+
+            <h3>MUHAMMAD AZIM</h3>
+
+            <p>+60 13-5541 7667</p>
+
+            <p>mdazim.aman@student.gmi.edu.my</p>
+
+        </div>
+
+
+        <div class="contact-person">
+
+            <h3>NURDAMIA AUNI</h3>
+
+            <p>+60 11-456 3021</p>
+
+            <p>nurdamia.suhaimi@student.gmi.edu.my</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROJECT INFORMATION
+===================================================== -->
+
+<section class="project-info">
+
+    <div>
+
+        <p class="section-number">
+            FINAL YEAR PROJECT
+        </p>
+
+        <h2>
+            Network Traffic Analysis
+            and Monitoring System
+        </h2>
+
+    </div>
+
+
+    <div class="project-details">
+
+        <div>
+            <span>PROJECT</span>
+            <strong>NETRA</strong>
+        </div>
+
+        <div>
+            <span>INSTITUTION</span>
+            <strong>German-Malaysian Institute</strong>
+        </div>
+
+        <div>
+            <span>PROGRAMME</span>
+            <strong>Cyber Security Technology</strong>
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-logo">
+
+        <img
+            src="assets/netra-logo.png"
+            alt="NETRA"
+        >
+
+        <div>
+            <strong>NETRA</strong>
+            <span>See Beyond Traffic.</span>
+        </div>
+
+    </div>
+
+    <p>
+        Network Traffic Analysis & Monitoring System
+    </p>
+
+    <p>
+        Final Year Project
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
