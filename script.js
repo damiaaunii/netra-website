@@ -32,15 +32,17 @@ function updateThemeLogo() {
     if (lightMode) {
 
         themeText.textContent = "Light";
-        themeIcon.textContent = "☀";
-
+        themeIcon.textContent = "";
+        themeIcon.className = "theme-icon sun-icon";
+        
         brandWordmark.src =
             "assets/netra-light.png";
 
     } else {
 
         themeText.textContent = "Dark";
-        themeIcon.textContent = "☾";
+        themeIcon.textContent = "";
+        themeIcon.className = "theme-icon moon-icon";
 
         brandWordmark.src =
             "assets/netra-dark.png";
