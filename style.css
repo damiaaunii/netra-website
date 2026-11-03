@@ -3,17 +3,29 @@
 ========================================================= */
 
 :root {
-    --background: #071426;
-    --background-2: #0a1a30;
-    --surface: #0d2038;
-    --surface-2: #102844;
+    /* DARK BACKGROUNDS */
+    --background: #091321;
+    --background-2: #111f30;
 
+    /* DARK CARDS */
+    --surface: #192d42;
+    --surface-2: #22394f;
+
+    /* TEXT ON DARK BACKGROUNDS */
     --text: #f5f9ff;
-    --muted: #94a9c3;
+    --muted: #c1d2df;
 
-    --cyan: #18d9ef;
-    --blue: #1687ff;
+    /* BRIGHT ACCENTS ON DARK */
+    --cyan: #38d9ed;
+    --blue: #3b82f6;
     --violet: #7668ff;
+
+    /* LIGHT SECTIONS INSIDE DARK MODE */
+    --light-section: #eaf4f5;
+    --light-text: #112237;
+    --light-muted: #395168;
+    --light-line: #b9cdd5;
+    --light-accent: #07829a;
 
     --accent-gradient:
         linear-gradient(
@@ -38,20 +50,56 @@
 ========================================================= */
 
 body.light-mode {
-    --background: #f7fbff;
-    --background-2: #edf6fd;
-    --surface: #ffffff;
-    --surface-2: #e8f3fb;
+    /* BABY BLUE BACKGROUNDS */
+    --background: #EAF6FB;
+    --background-2: #F7FBFD;
 
-    --text: #071a32;
-    --muted: #62778f;
+    /* CARDS */
+    --surface: #FFFFFF;
+    --surface-2: #E1F1F7;
 
-    --border: rgba(15, 57, 94, 0.12);
+    /* TEXT */
+    --text: #10263D;
+    --muted: #5D7487;
 
+    /* BORDER */
+    --border: rgba(16, 38, 61, 0.12);
+
+    /* SHADOW */
     --shadow:
-        0 25px 60px rgba(35, 75, 110, 0.12);
+        0 25px 60px rgba(33, 91, 125, 0.10);
 }
 
+/* LIGHT MODE - PROCESS TIMELINE */
+
+body.light-mode .process-track {
+    border-color: #3A8DA8;
+}
+
+body.light-mode .process-item::before {
+    background: #38D9ED;
+
+    box-shadow:
+        0 0 0 5px rgba(56, 217, 237, 0.18);
+}
+
+/* LIGHT MODE TEXT COLOURS */
+
+body.light-mode .section-heading h2 {
+    color: #10263D;
+}
+
+body.light-mode .section-heading h2 span {
+    color: #07829A;
+}
+
+body.light-mode .section-number {
+    color: #07829A;
+}
+
+body.light-mode .section-intro {
+    color: #4F697C;
+}
 
 /* =========================================================
    RESET
@@ -249,6 +297,9 @@ body.light-mode .navbar {
     margin-bottom: 60px;
 }
 
+
+/* SMALL SECTION NUMBER / LABEL */
+
 .section-number {
     margin-bottom: 15px;
 
@@ -260,8 +311,13 @@ body.light-mode .navbar {
     letter-spacing: 0.18em;
 }
 
+
+/* MAIN HEADING */
+
 .section-heading h2 {
     max-width: 750px;
+
+    color: var(--text);
 
     font-family: var(--heading);
 
@@ -271,10 +327,19 @@ body.light-mode .navbar {
     letter-spacing: -0.045em;
 }
 
+
+/* SECOND LINE ON DARK BACKGROUND
+   Example: VISIBILITY.
+*/
+
 .section-heading h2 span {
     display: block;
-    color: var(--muted);
+
+    color: var(--cyan);
 }
+
+
+/* DESCRIPTION ON DARK BACKGROUND */
 
 .section-intro {
     max-width: 520px;
@@ -283,6 +348,135 @@ body.light-mode .navbar {
 
     font-size: 15px;
     line-height: 1.9;
+}
+
+
+/* =========================================================
+   DARK MODE — LIGHT BACKGROUND SECTIONS
+   Product + Technology + Project Info
+========================================================= */
+
+
+/* -------------------------
+   PRODUCT
+------------------------- */
+
+body:not(.light-mode) .product-section {
+    background: var(--light-section);
+    color: var(--light-text);
+
+    border-color: var(--light-line);
+}
+
+body:not(.light-mode) .product-section .section-number {
+    color: var(--light-accent);
+}
+
+body:not(.light-mode) .product-section .section-heading h2 {
+    color: var(--light-text);
+}
+
+body:not(.light-mode) .product-section .section-heading h2 span {
+    color: var(--light-accent);
+}
+
+body:not(.light-mode) .product-section .section-intro {
+    color: var(--light-muted);
+}
+
+
+/* -------------------------
+   TECHNOLOGY
+------------------------- */
+
+body:not(.light-mode) .technology-section {
+    background: var(--light-section);
+    color: var(--light-text);
+}
+
+body:not(.light-mode) .technology-section .section-number {
+    color: var(--light-accent);
+}
+
+body:not(.light-mode) .technology-section .section-heading h2 {
+    color: var(--light-text);
+}
+
+body:not(.light-mode) .technology-section .section-heading h2 span {
+    color: var(--light-accent);
+}
+
+body:not(.light-mode) .technology-section .section-intro {
+    color: var(--light-muted);
+}
+
+
+/* =========================================================
+   DARK MODE — DARK BACKGROUND SECTIONS
+   Dashboard + How It Works + Team
+========================================================= */
+
+
+/* -------------------------
+   DASHBOARD
+------------------------- */
+
+body:not(.light-mode) .dashboard-section .section-number {
+    color: var(--cyan);
+}
+
+body:not(.light-mode) .dashboard-section .section-heading h2 {
+    color: var(--text);
+}
+
+body:not(.light-mode) .dashboard-section .section-heading h2 span {
+    color: var(--cyan);
+}
+
+body:not(.light-mode) .dashboard-section .section-intro {
+    color: var(--muted);
+}
+
+
+/* -------------------------
+   HOW IT WORKS
+------------------------- */
+
+body:not(.light-mode) .how-section .section-number {
+    color: var(--cyan);
+}
+
+body:not(.light-mode) .how-section .section-heading h2 {
+    color: var(--text);
+}
+
+body:not(.light-mode) .how-section .section-heading h2 span {
+    color: var(--cyan);
+}
+
+body:not(.light-mode) .how-section .section-intro {
+    color: var(--muted);
+}
+
+
+/* -------------------------
+   TEAM
+------------------------- */
+
+body:not(.light-mode) .team-section .section-number {
+    color: var(--cyan);
+}
+
+body:not(.light-mode) .team-section .section-heading h2 {
+    color: var(--text);
+}
+
+body:not(.light-mode) .team-section .section-heading h2 span {
+    color: var(--cyan);
+}
+
+body:not(.light-mode) .team-section .section-intro {
+    color: var(--muted);
 }
 
 
@@ -633,8 +827,6 @@ body.light-mode .navbar {
     line-height: 1.9;
 }
 
-/* FIXED LABEL - NO LARGE EMPTY BOX */
-
 .feature-label {
     flex-shrink: 0;
     align-self: flex-start;
@@ -653,12 +845,68 @@ body.light-mode .navbar {
 }
 
 
+/* PRODUCT — LIGHT BREAK IN DARK MODE */
+
+body:not(.light-mode) .product-section {
+    background: var(--light-section);
+    color: var(--light-text);
+
+    border-color: var(--light-line);
+}
+
+body:not(.light-mode) .product-section .section-number {
+    color: var(--light-accent);
+}
+
+body:not(.light-mode) .product-section .section-heading h2 {
+    color: var(--light-text);
+}
+
+body:not(.light-mode) .technology-section .section-heading h2 span {
+    color: var(--light-accent);
+}
+
+body:not(.light-mode) .product-section .section-intro {
+    color: var(--light-muted);
+}
+
+body:not(.light-mode) .product-section .accordion-item {
+    border-color: var(--light-line);
+}
+
+body:not(.light-mode) .product-section .accordion-header {
+    color: var(--light-text);
+}
+
+body:not(.light-mode) .product-section .accordion-title {
+    color: var(--light-text);
+}
+
+body:not(.light-mode) .product-section .accordion-number,
+body:not(.light-mode) .product-section .accordion-icon {
+    color: var(--light-accent);
+}
+
+body:not(.light-mode) .product-section .accordion-content p {
+    color: var(--light-muted);
+}
+
+body:not(.light-mode) .product-section .feature-label {
+    color: var(--light-accent);
+    border-color: rgba(7, 130, 154, 0.25);
+}
+
+
 /* =========================================================
    DASHBOARD
 ========================================================= */
 
 .dashboard-section {
     overflow: hidden;
+}
+
+body:not(.light-mode) .dashboard-section {
+    background: #091321;
 }
 
 .slideshow {
@@ -860,6 +1108,7 @@ body.light-mode .navbar {
     border-radius: 8px;
 }
 
+
 /* =========================================================
    HOW IT WORKS — PROCESS TIMELINE
 ========================================================= */
@@ -876,17 +1125,11 @@ body.light-mode .navbar {
     border-top: 2px solid #39758d;
 }
 
-
-/* EACH PROCESS */
-
 .process-item {
     position: relative;
 
     padding: 34px 22px 10px 0;
 }
-
-
-/* GREEN TIMELINE DOT */
 
 .process-item::before {
     content: "";
@@ -907,18 +1150,12 @@ body.light-mode .navbar {
         0 0 0 5px #173d46;
 }
 
-
-/* NUMBER */
-
 .process-number {
     color: var(--cyan);
 
     font-size: 12px;
     font-weight: 800;
 }
-
-
-/* TITLE */
 
 .process-item h3 {
     margin: 20px 0 10px;
@@ -933,9 +1170,6 @@ body.light-mode .navbar {
     letter-spacing: 1px;
 }
 
-
-/* DESCRIPTION */
-
 .process-item p {
     max-width: 235px;
 
@@ -945,9 +1179,6 @@ body.light-mode .navbar {
 
     line-height: 1.65;
 }
-
-
-/* BOTTOM NOTE */
 
 .workflow-disclaimer {
     max-width: 1250px;
@@ -963,9 +1194,31 @@ body.light-mode .navbar {
     font-size: 12px;
 }
 
+
 /* =========================================================
    TECHNOLOGY
 ========================================================= */
+
+body:not(.light-mode) .technology-section {
+    background: var(--light-section);
+    color: var(--light-text);
+}
+
+body:not(.light-mode) .technology-section .section-number {
+    color: var(--light-accent);
+}
+
+body:not(.light-mode) .technology-section .section-heading h2 {
+    color: var(--light-text);
+}
+
+body:not(.light-mode) .product-section .section-heading h2 span {
+    color: #07829a;
+}
+
+body:not(.light-mode) .technology-section .section-intro {
+    color: var(--light-muted);
+}
 
 .technology-grid {
     display: grid;
@@ -990,9 +1243,6 @@ body.light-mode .navbar {
         box-shadow 0.25s ease;
 }
 
-
-/* NUMBER — TOP */
-
 .technology-card > span:first-child {
     position: absolute;
 
@@ -1004,9 +1254,6 @@ body.light-mode .navbar {
     font-size: 10px;
     font-weight: 700;
 }
-
-
-/* TECHNOLOGY NAME — BOTTOM */
 
 .technology-card h3 {
     position: absolute;
@@ -1021,9 +1268,6 @@ body.light-mode .navbar {
     font-size: 20px;
     font-weight: 700;
 }
-
-
-/* NORMAL SHORT DESCRIPTION */
 
 .technology-card .tech-short {
     position: absolute;
@@ -1040,9 +1284,6 @@ body.light-mode .navbar {
     transition:
         opacity 0.25s ease;
 }
-
-
-/* HOVER EXPLANATION — MIDDLE */
 
 .technology-card .tech-description {
     position: absolute;
@@ -1065,9 +1306,6 @@ body.light-mode .navbar {
     transition:
         opacity 0.25s ease;
 }
-
-
-/* HOVER */
 
 .technology-card:hover {
     transform: translateY(-5px);
@@ -1164,6 +1402,38 @@ body.light-mode .navbar {
 }
 
 
+/* TECHNOLOGY LIGHT SECTION CARD COLOURS */
+
+body:not(.light-mode) .technology-section .technology-card {
+    background: #ffffff;
+    border-color: var(--light-line);
+}
+
+body:not(.light-mode) .technology-section .technology-card h3 {
+    color: var(--light-text);
+}
+
+body:not(.light-mode) .technology-section .tech-short,
+body:not(.light-mode) .technology-section .tech-description,
+body:not(.light-mode) .technology-section .technology-short,
+body:not(.light-mode) .technology-section .technology-description {
+    color: var(--light-muted);
+}
+
+body:not(.light-mode) .technology-section .technology-card:hover,
+body:not(.light-mode) .technology-section .technology-card:focus,
+body:not(.light-mode) .technology-section .technology-card.active {
+    background: #f7fbfc;
+    border-color: var(--light-accent);
+}
+
+body:not(.light-mode) .technology-section .technology-card:hover h3,
+body:not(.light-mode) .technology-section .technology-card:focus h3,
+body:not(.light-mode) .technology-section .technology-card.active h3 {
+    color: var(--light-accent);
+}
+
+
 /* =========================================================
    STATEMENT
 ========================================================= */
@@ -1238,6 +1508,10 @@ body.light-mode .navbar {
     background: var(--background-2);
 }
 
+body:not(.light-mode) .team-section {
+    background: #091321;
+}
+
 .simple-team {
     max-width: 950px;
 
@@ -1248,15 +1522,9 @@ body.light-mode .navbar {
     align-items: center;
 }
 
-
-/* PERSON */
-
 .team-person {
     text-align: center;
 }
-
-
-/* PHOTO */
 
 .team-photo {
     width: 105px;
@@ -1292,9 +1560,6 @@ body.light-mode .navbar {
     font-weight: 700;
 }
 
-
-/* ROLE */
-
 .team-role {
     margin-bottom: 7px;
 
@@ -1306,9 +1571,6 @@ body.light-mode .navbar {
     letter-spacing: 0.15em;
 }
 
-
-/* NAME */
-
 .team-person h3 {
     color: var(--text);
 
@@ -1319,9 +1581,6 @@ body.light-mode .navbar {
 
     line-height: 1.45;
 }
-
-
-/* SMALL VERTICAL CONNECTOR */
 
 .team-line {
     width: 1px;
@@ -1336,9 +1595,6 @@ body.light-mode .navbar {
     );
 }
 
-
-/* THREE MEMBERS */
-
 .team-members {
     width: 100%;
 
@@ -1350,9 +1606,6 @@ body.light-mode .navbar {
     align-items: start;
 }
 
-
-/* SMALLER MEMBER PHOTOS */
-
 .team-members .team-photo {
     width: 90px;
     height: 90px;
@@ -1361,10 +1614,6 @@ body.light-mode .navbar {
 
 /* =========================================================
    TEAM MOBILE
-========================================================= */
-/* =========================================================
-   TEAM MOBILE
-   KEEP SAME ORGANIZATION LAYOUT AS DESKTOP
 ========================================================= */
 
 @media (max-width: 650px) {
@@ -1411,12 +1660,17 @@ body.light-mode .navbar {
     }
 }
 
+
 /* =========================================================
    CONTACT
 ========================================================= */
 
 .contact-section {
     border-top: 1px solid var(--border);
+}
+
+body:not(.light-mode) .contact-section {
+    background: #101f30;
 }
 
 .contact-title {
@@ -1485,6 +1739,13 @@ body.light-mode .navbar {
     border-top: 1px solid var(--border);
 }
 
+body:not(.light-mode) .project-info {
+    background: var(--light-section);
+    color: var(--light-text);
+
+    border-color: var(--light-line);
+}
+
 .project-info h2 {
     max-width: 600px;
 
@@ -1528,6 +1789,25 @@ body.light-mode .navbar {
 }
 
 
+/* PROJECT INFO — DARK MODE LIGHT BREAK */
+
+body:not(.light-mode) .project-info h2 {
+    color: var(--light-text);
+}
+
+body:not(.light-mode) .project-info .project-details div {
+    border-color: var(--light-line);
+}
+
+body:not(.light-mode) .project-info .project-details span {
+    color: var(--light-accent);
+}
+
+body:not(.light-mode) .project-info .project-details strong {
+    color: var(--light-text);
+}
+
+
 /* =========================================================
    FOOTER
 ========================================================= */
@@ -1549,6 +1829,11 @@ body.light-mode .navbar {
     color: var(--muted);
 
     font-size: 9px;
+}
+
+body:not(.light-mode) .footer {
+    background: #060d17;
+    color: #c1d2df;
 }
 
 .footer-logo {
@@ -1576,6 +1861,10 @@ body.light-mode .navbar {
     font-size: 16px;
 
     letter-spacing: 0.10em;
+}
+
+body:not(.light-mode) .footer-logo strong {
+    color: #f5f9ff;
 }
 
 
@@ -1787,17 +2076,52 @@ body.light-mode .navbar {
     }
 
     .system-design-container {
+        width: 100%;
         padding: 8px;
-
-        overflow-x: auto;
+        overflow: hidden;
     }
 
     .system-design-image {
-        min-width: 700px;
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        object-fit: contain;
     }
 
     .technology-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .technology-card {
+        min-height: 190px;
+        padding: 20px 18px;
+    }
+
+    .technology-card > span:first-child {
+        top: 20px;
+        left: 18px;
+    }
+
+    .technology-card h3 {
+        left: 18px;
+        bottom: 65px;
+        font-size: 18px;
+    }
+
+    .technology-card .tech-short {
+        left: 18px;
+        right: 18px;
+        bottom: 20px;
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    .technology-card .tech-description {
+        left: 18px;
+        right: 18px;
+        font-size: 11px;
+        line-height: 1.5;
     }
 
     .statement-section {
@@ -1837,8 +2161,6 @@ body.light-mode .navbar {
         height: 25px;
     }
 
-    /* CONTACT MOBILE */
-
     .contact-grid {
         grid-template-columns: 1fr;
 
@@ -1848,8 +2170,6 @@ body.light-mode .navbar {
     .contact-title {
         font-size: 40px;
     }
-
-    /* PROJECT INFO */
 
     .project-details div {
         flex-direction: column;
@@ -1869,6 +2189,98 @@ body.light-mode .navbar {
 
 }
 
+/* HOW IT WORKS - VERTICAL TIMELINE ON PHONE */
+
+@media (max-width: 650px) {
+
+    .process-track {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        margin-top: 40px;
+        padding-left: 28px;
+
+        border-top: none;
+        border-left: 2px solid #39758d;
+    }
+
+    .process-item {
+        position: relative;
+        padding: 0 0 55px 0;
+    }
+
+    .process-item:last-child {
+        padding-bottom: 10px;
+    }
+
+    .process-item::before {
+        width: 12px;
+        height: 12px;
+
+        top: 4px;
+        left: -35px;
+
+        background: #49df7c;
+        border-radius: 50%;
+
+        box-shadow: 0 0 0 5px #173d46;
+    }
+
+    .process-number {
+        display: block;
+        margin-bottom: 12px;
+
+        color: var(--cyan);
+
+        font-size: 12px;
+        font-weight: 800;
+    }
+
+    .process-item h3 {
+        margin: 0 0 10px;
+        font-size: 20px;
+    }
+
+    .process-item p {
+        max-width: 280px;
+
+        font-size: 13px;
+        line-height: 1.65;
+    }
+
+}
+
+/* NUMBER */
+
+.process-number {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--cyan);
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+/* TITLE */
+
+.process-item h3 {
+    margin: 0 0 10px;
+
+    font-size: 20px;
+}
+
+/* DESCRIPTION */
+
+.process-item p {
+    max-width: 280px;
+
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+
 /* =========================================================
    HERO SIGNAL BACKGROUND
 ========================================================= */
@@ -1878,7 +2290,7 @@ body.light-mode .navbar {
     overflow: hidden;
     isolation: isolate;
 
-    background: #091321;
+    background: var(--background);
 
     min-height: auto;
 
@@ -1887,9 +2299,6 @@ body.light-mode .navbar {
     padding-top: 55px;
     padding-bottom: 55px;
 }
-
-
-/* SIGNAL BACKGROUND */
 
 .signal-field {
     position: absolute;
@@ -1907,9 +2316,6 @@ body.light-mode .navbar {
             transparent 48%
         );
 }
-
-
-/* MOVING GRID */
 
 .signal-grid {
     position: absolute;
@@ -1934,9 +2340,6 @@ body.light-mode .navbar {
     animation: netra-grid-drift 24s linear infinite;
 }
 
-
-/* MOVING LIGHT BEAM */
-
 .scan-beam {
     position: absolute;
 
@@ -1959,9 +2362,6 @@ body.light-mode .navbar {
 
     animation: netra-beam-travel 13s linear infinite;
 }
-
-
-/* BACKGROUND SIGNAL POINTS */
 
 .signal-point {
     position: absolute;
@@ -2025,13 +2425,9 @@ body.light-mode .navbar {
     transform: rotate(2deg);
 }
 
-
-/* TOP + BOTTOM LABELS */
-
 .instrument-top,
 .instrument-bottom {
-    padding:
-        15px 17px;
+    padding: 15px 17px;
 
     display: flex;
 
@@ -2049,17 +2445,12 @@ body.light-mode .navbar {
 }
 
 .instrument-top {
-    border-bottom:
-        1px solid var(--border);
+    border-bottom: 1px solid var(--border);
 }
 
 .instrument-bottom {
-    border-top:
-        1px solid var(--border);
+    border-top: 1px solid var(--border);
 }
-
-
-/* GREEN CONCEPT VISUAL */
 
 .instrument-state {
     color: #a4e8b8;
@@ -2080,9 +2471,6 @@ body.light-mode .navbar {
     box-shadow:
         0 0 10px rgba(73, 223, 124, 0.65);
 }
-
-
-/* RADAR SCREEN */
 
 .instrument-screen {
     position: relative;
@@ -2105,9 +2493,6 @@ body.light-mode .navbar {
         #0c1b2a;
 }
 
-
-/* RADAR CIRCLES */
-
 .scope-ring {
     position: absolute;
 
@@ -2127,9 +2512,6 @@ body.light-mode .navbar {
     width: 64%;
 }
 
-
-/* CROSS LINES */
-
 .scope-cross {
     position: absolute;
 
@@ -2146,9 +2528,6 @@ body.light-mode .navbar {
     width: 1px;
     height: 100%;
 }
-
-
-/* ROTATING RADAR */
 
 .scope-sweep {
     position: absolute;
@@ -2171,9 +2550,6 @@ body.light-mode .navbar {
     animation:
         netra-radar-turn 9s linear infinite;
 }
-
-
-/* NETRA LOGO IN MIDDLE */
 
 .scope-center {
     position: relative;
@@ -2207,9 +2583,6 @@ body.light-mode .navbar {
 
     object-fit: contain;
 }
-
-
-/* GREEN RADAR POINTS */
 
 .scope-ping {
     position: absolute;
@@ -2265,7 +2638,6 @@ body.light-mode .navbar {
     }
 }
 
-
 @keyframes netra-beam-travel {
 
     from {
@@ -2277,7 +2649,6 @@ body.light-mode .navbar {
     }
 }
 
-
 @keyframes netra-radar-turn {
 
     from {
@@ -2288,7 +2659,6 @@ body.light-mode .navbar {
         transform: rotate(360deg);
     }
 }
-
 
 @keyframes netra-point-pulse {
 
@@ -2325,7 +2695,6 @@ body.light-mode .navbar {
     }
 }
 
-
 @media (max-width: 650px) {
 
     .instrument-screen {
@@ -2344,6 +2713,7 @@ body.light-mode .navbar {
         font-size: 7px;
     }
 }
+
 
 /* =========================================================
    LIGHT MODE FIX — HERO SIGNAL VIEW
@@ -2376,6 +2746,7 @@ body.light-mode .signal-grid {
             transparent 1px
         );
 }
+
 
 /* =========================================================
    LIGHT MODE — KEEP SIGNAL VIEW DARK
@@ -2415,5 +2786,3 @@ body.light-mode .scope-center {
     box-shadow:
         0 0 35px rgba(56, 217, 237, 0.14);
 }
-
-
