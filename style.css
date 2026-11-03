@@ -459,6 +459,44 @@ body:not(.light-mode) .how-section .section-intro {
 }
 
 
+/* =========================================================
+   NETRA IN 60 SECONDS
+========================================================= */
+
+.video-section {
+    padding: 110px 0;
+    background: var(--background);
+}
+
+.video-heading {
+    margin-bottom: 45px;
+}
+
+.video-heading h2 span {
+    color: var(--cyan);
+}
+
+.video-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    background: #000;
+}
+
+.video-container video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+}
+
+
+
+
 /* -------------------------
    TEAM
 ------------------------- */
@@ -2243,6 +2281,27 @@ body:not(.light-mode) .footer-logo strong {
     }
 
 }
+
+
+/* NETRA VIDEO - MOBILE */
+
+.video-section {
+    padding: 70px 0;
+}
+
+.video-heading {
+    margin-bottom: 28px;
+}
+
+.video-container {
+    border-radius: 12px;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+}
+
 
 /* HOW IT WORKS - VERTICAL TIMELINE ON PHONE */
 
