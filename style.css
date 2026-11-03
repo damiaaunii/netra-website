@@ -1982,11 +1982,40 @@ body:not(.light-mode) .footer-logo strong {
     }
 
     .project-info {
-        grid-template-columns: 1fr;
-
-        gap: 40px;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
     }
 
+    .project-info {
+        padding: 35px 22px;
+
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+
+        align-items: center;
+    }
+
+    .project-info h2 {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .project-details {
+        gap: 10px;
+    }
+
+    .project-details div {
+        padding-bottom: 8px;
+        gap: 3px;
+    }
+
+    .project-details span {
+        font-size: 7px;
+    }
+
+    .project-details strong {
+        font-size: 9px;
+    }
 }
 
 
