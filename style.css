@@ -2299,21 +2299,47 @@ body:not(.light-mode) .footer-logo strong {
 
 /* NETRA VIDEO - MOBILE */
 
+/* NETRA VIDEO - MOBILE */
+
 .video-section {
-    padding: 70px 0;
+    padding: 45px 18px 55px;
+    background: var(--background-2);
+    border-top: 1px solid var(--border);
+}
+
+.video-section .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
 }
 
 .video-heading {
-    margin-bottom: 28px;
+    margin: 0 0 24px;
+    gap: 8px;
+}
+
+.video-heading h2 {
+    font-size: 28px;
+    line-height: 1.15;
+    margin: 0;
+}
+
+.video-heading .section-label {
+    font-size: 11px;
+    margin: 0;
 }
 
 .video-container {
+    width: 100%;
+    max-width: 100%;
     border-radius: 12px;
 }
 
 .video-container video {
+    display: block;
     width: 100%;
     height: auto;
+    aspect-ratio: 16 / 9;
 }
 
 
