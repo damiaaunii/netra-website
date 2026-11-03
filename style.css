@@ -469,9 +469,23 @@ body:not(.light-mode) .how-section .section-intro {
 }
 
 .video-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
     margin-bottom: 45px;
 }
 
+.video-heading h2 {
+    margin: 0;
+    text-align: center;
+}
+
+.video-heading .section-label {
+    margin: 0;
+    text-align: center;
+}
 .video-heading h2 span {
     color: var(--cyan);
 }
