@@ -2025,23 +2025,6 @@ body:not(.light-mode) .footer-logo strong {
 
 @media (max-width: 650px) {
 
-    .technology-card h3 {
-        font-size: 14px;
-        line-height: 1.2;
-
-        left: 18px;
-        right: 18px;
-        bottom: 52px;
-    }
-
-    .technology-card .tech-short {
-        left: 18px;
-        right: 18px;
-        bottom: 20px;
-
-        font-size: 8px;
-        line-height: 1.3;
-    }
 
     .brand-symbol {
         width: 39px;
@@ -2168,6 +2151,11 @@ body:not(.light-mode) .footer-logo strong {
     .technology-card > span:first-child {
         top: 20px;
         left: 18px;
+    }
+
+    .vscode-title {
+        font-size: 14px !important;
+        line-height: 1.15 !important;
     }
 
     .technology-card h3 {
